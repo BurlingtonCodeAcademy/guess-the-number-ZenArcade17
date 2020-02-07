@@ -14,5 +14,19 @@ async function start() {
   let secretNumber = await ask("What is your secret number?\nI won't peek, I promise...\n");
   console.log('You entered: ' + secretNumber);
   // Now try and complete the program.
+  let computerGuess = randomInt(1, 100);
+  let response = await ask("Is your number " + computerGuess + "? ");
+  if (response === "yes" || response === "y") {
+    console.log("VICTORY! YOUR SOUL IS MINE!!!")
+  }
   process.exit();
 }
+
+function randomInt(min, max) {
+  let range = max - min + 1; 
+  return (min + Math.floor(Math.random() * range));
+ }
+
+ 
+ 
+
