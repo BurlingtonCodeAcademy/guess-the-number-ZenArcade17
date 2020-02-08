@@ -16,11 +16,16 @@ async function start() {
   // Now try and complete the program.
   let computerGuess = randomInt(1, 100);
   let response = await ask("Is your number " + computerGuess + "? ");
+
   if (response === "yes" || response === "y") {
     console.log("VICTORY! YOUR SOUL IS MINE!!!")
   } else if (response === "no" || response === "n") {
     let response = await ask("Is it higher or lower? ")
-    console.log(response)
+    //console.log(response)
+    while (response === "higher" || response === "h") {
+      let computerGuess2 = randomInt(computerGuess++, 100)
+      let response = await ask("Is your number " + computerGuess2 + "? ")
+    }
   }
   process.exit();
 }
