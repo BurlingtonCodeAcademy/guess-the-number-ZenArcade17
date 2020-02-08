@@ -18,6 +18,9 @@ async function start() {
   let response = await ask("Is your number " + computerGuess + "? ");
   if (response === "yes" || response === "y") {
     console.log("VICTORY! YOUR SOUL IS MINE!!!")
+  } else if (response === "no" || response === "n") {
+    let response = await ask("Is it higher or lower? ")
+    console.log(response)
   }
   process.exit();
 }
