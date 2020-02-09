@@ -7,6 +7,15 @@ function ask(questionText) {
   });
 }
 
+function randomInt(min, max) {
+  let range = max - min + 1;
+  return (min + Math.floor(Math.random() * range));
+}
+
+let lowNum = 1;
+let highNum = 100
+let randNum = randomInt(lowNum, highNum)
+
 start();
 
 async function start() {
@@ -14,27 +23,31 @@ async function start() {
   let secretNumber = await ask("What is your secret number?\nI won't peek, I promise...\n");
   console.log('You entered: ' + secretNumber);
   // Now try and complete the program.
-  let computerGuess = randomInt(1, 100);
-  let response = await ask("Is your number " + computerGuess + "? ");
 
-  if (response === "yes" || response === "y") {
-    console.log("VICTORY! YOUR SOUL IS MINE!!!")
-  } else if (response === "no" || response === "n") {
-    let response = await ask("Is it higher or lower? ")
-    //console.log(response)
-    while (response === "higher" || response === "h") {
-      let computerGuess2 = randomInt(computerGuess++, 100)
-      let response = await ask("Is your number " + computerGuess2 + "? ")
+  let response = await ask("Is your number " + randNum + "? ");
+  while (response !== "yes" || response !== "y") {
+    if (response === "yes" || response === "y") {
+      console.log("VICTORY! YOUR SOUL IS MINE!!!")
+      process.exit()
+    } else if (response === "no" || response === "n") {
+      response = await ask("Is it higher or lower? ")
+      //console.log(response)
+      if (response === "higher" || response === "h") {
+        lowNum = randNum + 1
+        randNum = randomInt(lowNum, highNum)
+        response = await ask("Is your number " + randNum + "? ")
+      } else if (response === "lower" || response === "l") {
+        highNum = randNum - 1
+        randNum = randomInt(lowNum, highNum)
+        response = await ask("Is your number " + randNum + "? ")
+      }
     }
+
+    
   }
-  process.exit();
+
+
+
+
+
 }
-
-function randomInt(min, max) {
-  let range = max - min + 1; 
-  return (min + Math.floor(Math.random() * range));
- }
-
- 
- 
-
