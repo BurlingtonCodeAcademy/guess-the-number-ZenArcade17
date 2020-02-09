@@ -12,6 +12,11 @@ function randomInt(min, max) {
   return (min + Math.floor(Math.random() * range));
 }
 
+//Here is my sanitize function
+function saniResp(string) {
+  return string.trim().toLowerCase()
+}
+
 let lowNum = 1;
 let highNum = 100
 let randNum = randomInt(lowNum, highNum)
@@ -25,22 +30,24 @@ async function start() {
   // Now try and complete the program.
 
   let response = await ask("Is your number " + randNum + "? ");
+  response = saniResp(response);
   while (response !== "yes" || response !== "y") {
+    response = saniResp(response);
     if (response === "yes" || response === "y") {
       console.log("VICTORY! YOUR SOUL IS MINE!!!")
       process.exit()
     } else if (response === "no" || response === "n") {
       response = await ask("Is it higher or lower? ")
-      //console.log(response)
-      if (response === "higher" || response === "h") {
-        lowNum = randNum + 1
-        randNum = randomInt(lowNum, highNum)
-        response = await ask("Is your number " + randNum + "? ")
-      } else if (response === "lower" || response === "l") {
-        highNum = randNum - 1
-        randNum = randomInt(lowNum, highNum)
-        response = await ask("Is your number " + randNum + "? ")
-      }
+      response = saniResp(response)
+        if (response === "higher" || response === "h") {
+          lowNum = randNum + 1
+          randNum = randomInt(lowNum, highNum)
+          response = await ask("Is your number " + randNum + "? ")
+        } else if (response === "lower" || response === "l") {
+          highNum = randNum - 1
+          randNum = randomInt(lowNum, highNum)
+          response = await ask("Is your number " + randNum + "? ")
+        }
     }
 
     
