@@ -32,6 +32,7 @@ async function start() {
   let response = await ask("Is your number " + randNum + "? ");
   response = saniResp(response);
   while (response !== "yes" || response !== "y") {
+    let lastGuess = randNum
     response = saniResp(response);
     if (response === "yes" || response === "y") {
       console.log("VICTORY! YOUR SOUL IS MINE!!!")
@@ -43,12 +44,22 @@ async function start() {
           lowNum = randNum + 1
           randNum = randomInt(lowNum, highNum)
           response = await ask("Is your number " + randNum + "? ")
+          if (lastGuess === randNum) {
+            console.log("You Cheated! Game Over!")
+            process.exit()
+          }
         } else if (response === "lower" || response === "l") {
           highNum = randNum - 1
           randNum = randomInt(lowNum, highNum)
           response = await ask("Is your number " + randNum + "? ")
+          if (lastGuess === randNum) {
+            console.log("You Cheated! Game Over!")
+            process.exit()
+          }
         }
-    }
+        
+      }
+
 
     
   }
