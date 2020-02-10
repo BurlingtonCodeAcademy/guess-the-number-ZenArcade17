@@ -12,6 +12,7 @@ function randomInt(min, max) {
   return (min + Math.floor(Math.random() * range));
 }
 
+
 //Here is my sanitize function
 function saniResp(string) {
   return string.trim().toLowerCase()
