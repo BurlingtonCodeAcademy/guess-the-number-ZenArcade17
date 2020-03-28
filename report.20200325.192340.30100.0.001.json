@@ -1,0 +1,527 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200325.192340.30100.0.001.json",
+    "dumpEventTime": "2020-03-25T19:23:40Z",
+    "dumpEventTimeStamp": "1585178620071",
+    "processId": 30100,
+    "cwd": "C:\\Users\\kmurt\\code\\projects\\guess-the-number-ZenArcade17",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "reverseIndex"
+    ],
+    "nodejsVersion": "v13.6.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "13.6.0",
+      "v8": "7.9.317.25-node.26",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "79",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "openssl": "1.1.1d",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v13.6.0/node-v13.6.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v13.6.0/node-v13.6.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v13.6.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18362",
+    "osVersion": "Windows 10 Home",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 25151906,
+        "nice": 0,
+        "sys": 26322015,
+        "idle": 338105406,
+        "irq": 12411000
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 18627265,
+        "nice": 0,
+        "sys": 7540875,
+        "idle": 363410640,
+        "irq": 503640
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 34426218,
+        "nice": 0,
+        "sys": 10678062,
+        "idle": 344474484,
+        "irq": 261078
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 17816421,
+        "nice": 0,
+        "sys": 5653875,
+        "idle": 366108484,
+        "irq": 166734
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 28786093,
+        "nice": 0,
+        "sys": 9167312,
+        "idle": 351625359,
+        "irq": 211484
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 15268906,
+        "nice": 0,
+        "sys": 4305109,
+        "idle": 370004750,
+        "irq": 115437
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 26299593,
+        "nice": 0,
+        "sys": 6893109,
+        "idle": 356386062,
+        "irq": 172265
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz",
+        "speed": 1800,
+        "user": 19228531,
+        "nice": 0,
+        "sys": 6926843,
+        "idle": 363423390,
+        "irq": 115265
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "ac:d5:64:8b:ad:f1",
+        "address": "2601:19b:c400:9510::2",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "ac:d5:64:8b:ad:f1",
+        "address": "2601:19b:c400:9510:a194:c60a:51ea:6261",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "ac:d5:64:8b:ad:f1",
+        "address": "2601:19b:c400:9510:85bd:3195:b89b:6614",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "ac:d5:64:8b:ad:f1",
+        "address": "fe80::a194:c60a:51ea:6261",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "ac:d5:64:8b:ad:f1",
+        "address": "192.168.0.9",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "LAPTOP-DFBN92TJ"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff71a1e1be9",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10857"
+    },
+    {
+      "pc": "0x00007ff71a1e5f5c",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+28124"
+    },
+    {
+      "pc": "0x00007ff71a1e4f18",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23960"
+    },
+    {
+      "pc": "0x00007ff71a2df84b",
+      "symbol": "v8::base::CPU::has_sse+39435"
+    },
+    {
+      "pc": "0x00007ff71ab07b7e",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff71aaef2d1",
+      "symbol": "v8::SharedArrayBuffer::Externalize+785"
+    },
+    {
+      "pc": "0x00007ff71a9b655c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1468"
+    },
+    {
+      "pc": "0x00007ff71a9c18a0",
+      "symbol": "v8::internal::Heap::ProtectUnprotectedMemoryChunks+1312"
+    },
+    {
+      "pc": "0x00007ff71a9be394",
+      "symbol": "v8::internal::Heap::PageFlagsAreConsistent+3188"
+    },
+    {
+      "pc": "0x00007ff71a9b3aa3",
+      "symbol": "v8::internal::Heap::CollectGarbage+1283"
+    },
+    {
+      "pc": "0x00007ff71a9b2234",
+      "symbol": "v8::internal::Heap::AllocateExternalBackingStore+1396"
+    },
+    {
+      "pc": "0x00007ff71a9db5e8",
+      "symbol": "v8::internal::Factory::NewRawOneByteString+216"
+    },
+    {
+      "pc": "0x00007ff71a7f726a",
+      "symbol": "v8::internal::String::SlowFlatten+442"
+    },
+    {
+      "pc": "0x00007ff71a6b7bdf",
+      "symbol": "unibrow::Utf8::EncodeOneByte+687"
+    },
+    {
+      "pc": "0x00007ff71a7f805c",
+      "symbol": "v8::internal::String::ToCString+92"
+    },
+    {
+      "pc": "0x00007ff71a725fd3",
+      "symbol": "v8::internal::Runtime::SetObjectProperty+43731"
+    },
+    {
+      "pc": "0x00007ff71af510dd",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+517453"
+    },
+    {
+      "pc": "0x00007ff71aedeeec",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+50012"
+    },
+    {
+      "pc": "0x00007ff71af236b5",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+330533"
+    },
+    {
+      "pc": "0x00000299c3dce9e1",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2151387136,
+    "totalCommittedMemory": 2151387136,
+    "usedMemory": 2146024936,
+    "availableMemory": 48441288,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 33040,
+        "used": 33040,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1047424,
+        "used": 114032,
+        "available": 933392
+      },
+      "old_space": {
+        "memorySize": 2147885056,
+        "committedMemory": 2147885056,
+        "capacity": 2145357160,
+        "used": 2145324848,
+        "available": 32312
+      },
+      "code_space": {
+        "memorySize": 430080,
+        "committedMemory": 430080,
+        "capacity": 204160,
+        "used": 204160,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 528384,
+        "committedMemory": 528384,
+        "capacity": 214960,
+        "used": 214960,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 135168,
+        "committedMemory": 135168,
+        "capacity": 131112,
+        "used": 131112,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047424,
+        "used": 0,
+        "available": 1047424
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 285.625,
+    "kernelCpuSeconds": 1.781,
+    "cpuConsumptionPercent": 128.882,
+    "maxRss": 2251812864,
+    "pageFaults": {
+      "IORequired": 686886,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 2,
+      "writes": 6
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "ANSICON": "99x1000 (99x40)",
+    "ANSICON_DEF": "7",
+    "APPDATA": "C:\\Users\\kmurt\\AppData\\Roaming",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "CMDER_ALIASES": "1",
+    "CMDER_CLINK": "1",
+    "CMDER_CONFIGURED": "1",
+    "CMDER_INIT_END": " 9:06:00.41",
+    "CMDER_INIT_START": " 9:05:56.52",
+    "CMDER_ROOT": "C:\\Users\\kmurt\\Downloads\\cmder",
+    "CMDER_SHELL": "cmd",
+    "CMDER_USER_FLAGS": " ",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "LAPTOP-DFBN92TJ",
+    "COMSPEC": "C:\\windows\\system32\\cmd.exe",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "ConEmuANSI": "ON",
+    "ConEmuArgs": "/Icon \"C:\\Users\\kmurt\\Downloads\\cmder\\icons\\cmder.ico\" /Title Cmder",
+    "ConEmuBackHWND": "0x00010710",
+    "ConEmuBaseDir": "C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5\\ConEmu",
+    "ConEmuBaseDirShort": "C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5\\ConEmu",
+    "ConEmuBuild": "191012",
+    "ConEmuCfgDir": "C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5",
+    "ConEmuDir": "C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5",
+    "ConEmuDrawHWND": "0x00010712",
+    "ConEmuDrive": "C:",
+    "ConEmuHWND": "0x000E064A",
+    "ConEmuHooks": "Enabled",
+    "ConEmuPID": "22832",
+    "ConEmuPalette": "Monokai",
+    "ConEmuServerPID": "13956",
+    "ConEmuTask": "{cmd::Cmder}",
+    "ConEmuWorkDir": "C:\\Users\\kmurt",
+    "ConEmuWorkDrive": "C:",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "GIT_INSTALL_ROOT": "C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows",
+    "GIT_VERSION_USER": "2.24.1.windows.2",
+    "GIT_VERSION_VENDORED": "2.24.1.windows.2",
+    "HOME": "C:\\Users\\kmurt",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\kmurt",
+    "LANG": "en_US.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\kmurt\\AppData\\Local",
+    "LOGONSERVER": "\\\\LAPTOP-DFBN92TJ",
+    "MSYSTEM": "MINGW64",
+    "NUMBER_OF_PROCESSORS": "8",
+    "OLD_PATH": "C:\\Users\\kmurt\\Downloads\\cmder\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5\\ConEmu\\Scripts;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5\\ConEmu;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Users\\kmurt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\kmurt\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\kmurt\\AppData\\Roaming\\npm;C:\\Users\\kmurt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\heroku\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\kmurt\\Downloads\\cmder;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows\\cmd;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows\\mingw64\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows\\usr\\bin",
+    "OS": "Windows_NT",
+    "OneDrive": "C:\\Users\\kmurt\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\kmurt\\OneDrive",
+    "OnlineServices": "Online Services",
+    "PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\kmurt\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5\\ConEmu\\Scripts;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\conemu-maximus5\\ConEmu;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Users\\kmurt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\kmurt\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\kmurt\\AppData\\Roaming\\npm;C:\\Users\\kmurt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\heroku\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\kmurt\\Downloads\\cmder;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows\\cmd;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows\\mingw64\\bin;C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\git-for-windows\\usr\\bin",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 142 Stepping 12, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "8e0c",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PROMPT": "C\bL\bI\bN\bK\b \b$P$G",
+    "PS1": "\\[\\033]0;$TITLEPREFIX:$PWD\\007\\]\\n\\[\\033[32m\\]\\u@\\h \\[\\033[35m\\]$MSYSTEM \\[\\033[33m\\]\\w\\[\\033[36m\\]`__git_ps1`\\[\\033[0m\\]\\n$ ",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "C:/Users/kmurt/code/projects/guess-the-number-ZenArcade17",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "RegionCode": "NA",
+    "SESSIONNAME": "Console",
+    "SHLVL": "1",
+    "SVN_SSH": "C:\\\\Program Files\\\\Git\\\\bin\\\\ssh.exe",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\windows",
+    "TEMP": "C:\\Users\\kmurt\\AppData\\Local\\Temp",
+    "TERM": "cygwin",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.43.2",
+    "TMP": "C:\\Users\\kmurt\\AppData\\Local\\Temp",
+    "USERDOMAIN": "LAPTOP-DFBN92TJ",
+    "USERDOMAIN_ROAMINGPROFILE": "LAPTOP-DFBN92TJ",
+    "USERNAME": "kmurt",
+    "USERPROFILE": "C:\\Users\\kmurt",
+    "USER_BUILD": "windows.2",
+    "USER_MAJOR": "2",
+    "USER_MINOR": "24",
+    "USER_PATCH": "1",
+    "VENDORED_BUILD": "windows.2",
+    "VENDORED_MAJOR": "2",
+    "VENDORED_MINOR": "24",
+    "VENDORED_PATCH": "1",
+    "WINDIR": "C:\\windows",
+    "_": "C:/Program Files/nodejs/node",
+    "add_path": "C:\\Users\\kmurt\\Downloads\\cmder",
+    "aliases": "C:\\Users\\kmurt\\Downloads\\cmder\\config\\user_aliases.cmd",
+    "architecture": "64",
+    "architecture_bits": "64",
+    "ccall": "call C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\bin\\cexec.cmd",
+    "cexec": "C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\bin\\cexec.cmd",
+    "debug_output": "0",
+    "depth": "1",
+    "fast_init": "0",
+    "feFlagName": " ",
+    "find_query": "C:\\\\Users\\\\kmurt\\\\Downloads\\\\cmder",
+    "found": "1",
+    "git_executable": "C:\\Program Files\\Git\\cmd\\git.exe",
+    "git_locale": "\"C:\\Program Files\\Git\\usr\\bin\\locale.exe\"",
+    "lib_base": "call \"C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\lib\\lib_base.cmd\"",
+    "lib_console": "call \"C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\lib\\lib_console.cmd\"",
+    "lib_git": "call \"C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\lib\\lib_git.cmd\"",
+    "lib_path": "call \"C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\lib\\lib_path.cmd\"",
+    "lib_profile": "call \"C:\\Users\\kmurt\\Downloads\\cmder\\vendor\\lib\\lib_profile.cmd\"",
+    "max_depth": "1",
+    "nix_tools": "1",
+    "path_position": "append",
+    "platformcode": "KV",
+    "time_init": "0",
+    "user_aliases": "C:\\Users\\kmurt\\Downloads\\cmder\\config\\user_aliases.cmd",
+    "verbose_output": "0"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\windows\\SYSTEM32\\ntdll.dll",
+    "C:\\windows\\System32\\KERNEL32.DLL",
+    "C:\\windows\\System32\\KERNELBASE.dll",
+    "C:\\windows\\System32\\WS2_32.dll",
+    "C:\\windows\\System32\\RPCRT4.dll",
+    "C:\\windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\windows\\System32\\PSAPI.DLL",
+    "C:\\windows\\System32\\ucrtbase.dll",
+    "C:\\windows\\System32\\ADVAPI32.dll",
+    "C:\\windows\\System32\\msvcrt.dll",
+    "C:\\windows\\System32\\sechost.dll",
+    "C:\\windows\\System32\\USER32.dll",
+    "C:\\windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\windows\\System32\\win32u.dll",
+    "C:\\windows\\SYSTEM32\\USERENV.dll",
+    "C:\\windows\\System32\\GDI32.dll",
+    "C:\\windows\\System32\\gdi32full.dll",
+    "C:\\windows\\System32\\profapi.dll",
+    "C:\\windows\\System32\\msvcp_win.dll",
+    "C:\\windows\\System32\\CRYPT32.dll",
+    "C:\\windows\\System32\\MSASN1.dll",
+    "C:\\windows\\System32\\bcrypt.dll",
+    "C:\\windows\\SYSTEM32\\WINMM.dll",
+    "C:\\windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\windows\\System32\\cfgmgr32.dll",
+    "C:\\windows\\System32\\bcryptPrimitives.dll",
+    "C:\\windows\\System32\\IMM32.DLL",
+    "C:\\windows\\System32\\powrprof.dll",
+    "C:\\windows\\System32\\UMPDC.dll",
+    "C:\\windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\windows\\system32\\uxtheme.dll",
+    "C:\\windows\\System32\\combase.dll",
+    "C:\\windows\\system32\\mswsock.dll",
+    "C:\\windows\\System32\\kernel.appcore.dll",
+    "C:\\windows\\System32\\NSI.dll",
+    "C:\\windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\windows\\system32\\napinsp.dll",
+    "C:\\windows\\system32\\pnrpnsp.dll",
+    "C:\\windows\\System32\\winrnr.dll",
+    "C:\\windows\\system32\\NLAapi.dll",
+    "C:\\windows\\system32\\wshbth.dll"
+  ]
+}

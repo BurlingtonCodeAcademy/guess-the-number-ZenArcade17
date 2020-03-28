@@ -12,33 +12,61 @@ function randomInt(min, max) {
     return (min + Math.floor(Math.random() * range));
 }
 
-function saniResp(string) {
+function saniUp(string) {
     return string.trim().toUpperCase()
 }
 
-//Reverse program unfinished, but still runs as is
+
 start();
 
 async function start() {
     console.log("Let's play a game where I (computer) make up a number between 1 and 100,\nand you (human) try to guess it.")
-    let playTime = await ask("Would you like to play? (Y or N) ");
-    playTime = saniResp(playTime)
+    let playTime = await ask("Would you like to play? (Y or N) ")
+    playTime = saniUp(playTime)
     if (playTime === "Y") {
-        let secretNum = randomInt(1, 1);  //using these values for testing purposes
-        let guess = await ask("Ok! I've thought of a number between 1 and 100. What's your first guess? ");
-        if (guess != secretNum) {
-            console.log("Wrong! Guess again!")
-            //Continuing here     
+        let secretNum = randomInt(1, 100)  
+        let guess = ''
+        let guessBank = []
+        
+        console.log("Ok! I've thought of a number between 1 and 100. \nIf at any time you want to see all your previous guesses, just enter the command, 'guesses'. \nOk, let's play! What's your first guess? ")
+        while(guess != secretNum) {
+            guess = await ask('\n>_')
+            if(guess < 1 || guess > 100) {
 
-        } else {
-            console.log("Congrats! Victory is yours!")
-            process.exit()
-        }
+                console.log(`${guess} is not a number between 1 and 100! Please guess again.`)
+
+            } else if(guess > secretNum) {
+                
+                guessBank.push(guess)
+                console.log("Wrong- My number is LOWER than your guess! Guess again!")
+                
+                
+                
+                
+            } else if(guess < secretNum) {
+
+                guessBank.push(guess)
+                console.log("Wrong- My number is HIGHER than your guess! Guess again!")
+                
+            } else if(guess == secretNum) {
+                console.log("Congrats! Victory is yours!")
+                process.exit()
     
+            } else if(guess == 'guesses') {
+                
+                console.log(`You have guessed: ${guessBank}`)
+    
+            } else {
+                console.log("'" + guess + "'" + " is not a recognizable command.")
+            }
+        }
+
+        
+        
+        
+
     } else {
         console.log("Ok! Maybe next time! Goodbye!");
         process.exit()
     }
-
 }
-
