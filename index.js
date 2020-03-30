@@ -7,13 +7,15 @@ function ask(questionText) {
   });
 }
 
+//----------------------------------------- function that generates a random integer -----------------------------------------//
+
 function randomInt(min, max) {
   let range = max - min + 1;
   return (min + Math.floor(Math.random() * range));
 }
 
+//----------------------------------------- "sanitize" functions -----------------------------------------//
 
-//Here is my sanitize function
 function saniLow(string) {
   return string.trim().toLowerCase()
 }
@@ -22,25 +24,24 @@ function saniUp(string) {
   return string.trim().toUpperCase()
 }
 
-let lowNum = 1
-let highNum = 100
-let randNum = randomInt(lowNum, highNum)
+
 
 
 
 start()
 
+//----------------------------------------- function to start game/choose which version to play -----------------------------------------// 
 
 async function start() {
 
   let gameChoice = await ask(`Welcome to GUESS THE NUMBER! \nThis is a game where either you (human), or I (computer), think of a number between 1 and 100, and the other one of us tries to guess it! \nIf the guesser guesses incorrectly, they are given a hint of whether the target number is higher, or lower, than their guess. \nIf you would like to be the guesser, please enter the command, "ME". \nIf you would like me (the computer) to be the guesser, please enter the command, "COMP".\n`)
-  
+
   if (gameChoice == 'COMP') {
 
     startReg()
-  
 
-  } else if(gameChoice == "ME") {
+
+  } else if (gameChoice == "ME") {
 
     startReverse()
 
@@ -48,21 +49,32 @@ async function start() {
   }
 }
 
+//----------------------------------------- function to start a new game -----------------------------------------//
+
 async function playAgain() {
 
   let again = await ask("Would you like to play again? 'Y' or 'N'\n")
 
-  if(again == "Y") {
+  if (again == "Y") {
     await start()
   } else {
     process.exit()
   }
 }
 
+//----------------------------------------- function that starts version where computer guesses -----------------------------------------//
+
 async function startReg() {
+
+  let lowNum = 1
+  let highNum = 100
+  let randNum = randomInt(lowNum, highNum)
+
   console.log("Let's play a game where you (human) make up a number between 1 and 100,\nand I (computer) try to guess it.")
-  let secretNumber = await ask("What is your secret number?\nI won't peek, I promise...\n");
-  console.log('You entered: ' + secretNumber);
+
+  let secretNumber = await ask("What is your secret number?\nI won't peek, I promise...\n")
+
+  console.log(`Your secret number is: ${secretNumber}\n`)
 
 
   let response = await ask("Is your number " + randNum + "? ");
@@ -70,10 +82,12 @@ async function startReg() {
   while (response !== "yes" || response !== "y") {
     let lastGuess = randNum
     response = saniLow(response);
+
     if (response === "yes" || response === "y") {
+      
       console.log("VICTORY! YOUR SOUL IS MINE!!!")
       await playAgain()
-      
+
     } else if (response === "no" || response === "n") {
       response = await ask("Is it higher or lower? ")
       response = saniLow(response)
@@ -84,7 +98,7 @@ async function startReg() {
         if (lastGuess === randNum) {
           console.log("You Cheated! Game Over!")
           playAgain()
-          
+
         }
       } else if (response === "lower" || response === "l") {
         highNum = randNum - 1
@@ -93,15 +107,12 @@ async function startReg() {
         if (lastGuess === randNum) {
           console.log("You Cheated! Game Over!")
           playAgain()
-          
+
         }
       }
-
     }
-
-
-
   }
+
 
 
 
@@ -109,6 +120,7 @@ async function startReg() {
 
 }
 
+//----------------------------------------- function that starts version where human guesses -----------------------------------------//
 
 async function startReverse() {
   console.log("Let's play a game where I (computer) make up a number between 1 and 100,\nand you (human) try to guess it.")
@@ -133,33 +145,34 @@ async function startReverse() {
 
 
 
-
       } else if (guess < secretNum) {
+
 
         guessBank.push(guess)
         console.log("Wrong- My number is HIGHER than your guess! Guess again!")
 
+
       } else if (guess == secretNum) {
         console.log("Congrats! Victory is yours!")
         await playAgain()
-        
-        
+
+
 
       } else if (guess == 'guesses') {
 
         console.log(`You have guessed: ${guessBank}`)
 
       } else {
+
         console.log("'" + guess + "'" + " is not a recognizable command.")
+
       }
     }
 
 
-
-
-
   } else {
+
     console.log("Ok! Maybe next time! Goodbye!");
-    
+
   }
 }
